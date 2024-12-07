@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RootState } from "../../redux/store";
 
 const Header: React.FC = () => {
@@ -11,6 +11,10 @@ const Header: React.FC = () => {
       0
     )
   );
+
+  // Get the current route
+  const location = useLocation();
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="bg-gray-800 text-white sticky top-0 z-50 shadow-md">
@@ -25,12 +29,22 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link to="/" className="hover:underline">
+              <Link
+                to="/"
+                className={`hover:underline ${
+                  isActive("/") ? "text-violet-300 font-semibold" : ""
+                }`}
+              >
                 Products
               </Link>
             </li>
             <li>
-              <Link to="/cart" className="relative hover:underline">
+              <Link
+                to="/cart"
+                className={`relative hover:underline ${
+                  isActive("/cart") ? "text-violet-300 font-semibold" : ""
+                }`}
+              >
                 Cart
                 {cartCount > 0 && (
                   <span className="absolute -top-4 -right-2 bg-violet-500 text-white text-xs rounded-full px-2">

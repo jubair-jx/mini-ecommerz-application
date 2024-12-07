@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import { toast } from "sonner";
 import { removeFromCart, updateQuantity } from "../redux/slices/cartSlice";
 import { RootState } from "../redux/store";
 
@@ -10,6 +11,9 @@ const CartPage: React.FC = () => {
 
   const handleRemove = (id: number) => {
     dispatch(removeFromCart(id));
+    toast.warning("You removed the product from the cart", {
+      duration: 1500,
+    });
   };
 
   const handleQuantityChange = (id: number, quantity: number) => {
@@ -27,9 +31,9 @@ const CartPage: React.FC = () => {
     <div className="container mx-auto p-4 font-roboto">
       <div className=" flex justify-between items-center my-4">
         {" "}
-        <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+        <h1 className="sm:text-2xl text-xl font-bold mb-4">Your Cart</h1>
         <div className="mt-4">
-          <h2 className="text-xl font-bold">
+          <h2 className="sm:text-xl text-lg font-bold">
             Total:{" "}
             <span className="text-green-600">${totalPrice.toFixed(2)}</span>
           </h2>
@@ -90,7 +94,7 @@ const CartPage: React.FC = () => {
           </table>
         </div>
       ) : (
-        <p className="text-gray-600">Your cart is empty.</p>
+        <p className="text-gray-600 font-roboto">Your cart is empty.</p>
       )}
     </div>
   );

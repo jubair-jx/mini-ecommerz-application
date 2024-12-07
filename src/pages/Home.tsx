@@ -1,4 +1,5 @@
 import Hero from "../components/Hero/Hero";
+import ScrollToTopButton from "../components/ui/ScrollTopButton";
 import ProductListPage from "./ProductListPage";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Hero />
       <ProductListPage />
+      <ScrollToTopButton />
     </div>
   );
 };
