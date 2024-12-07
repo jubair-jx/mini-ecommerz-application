@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { RootState } from "../redux/store";
+import { RootState } from "../../redux/store";
 
 const Header: React.FC = () => {
   const cartCount = useSelector((state: RootState) =>
