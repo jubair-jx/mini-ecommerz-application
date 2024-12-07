@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   onAddToCart,
 }) => {
   return (
-    <div className="relative border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow bg-white font-roboto">
+    <div className="relative border border-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow bg-white font-roboto w-full">
       {/* Image Section */}
       <div className="relative w-full h-48">
         <img
