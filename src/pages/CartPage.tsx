@@ -24,8 +24,17 @@ const CartPage: React.FC = () => {
   );
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+    <div className="container mx-auto p-4 font-roboto">
+      <div className=" flex justify-between items-center my-4">
+        {" "}
+        <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+        <div className="mt-4">
+          <h2 className="text-xl font-bold">
+            Total:{" "}
+            <span className="text-green-600">${totalPrice.toFixed(2)}</span>
+          </h2>
+        </div>
+      </div>
       {cartItems.length > 0 ? (
         <div>
           <table className="table-auto w-full text-left border-collapse border border-gray-200">
@@ -79,12 +88,6 @@ const CartPage: React.FC = () => {
               ))}
             </tbody>
           </table>
-          <div className="mt-4">
-            <h2 className="text-xl font-bold">
-              Total:{" "}
-              <span className="text-green-600">${totalPrice.toFixed(2)}</span>
-            </h2>
-          </div>
         </div>
       ) : (
         <p className="text-gray-600">Your cart is empty.</p>

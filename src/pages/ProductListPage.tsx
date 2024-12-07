@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import ProductCard from "../components/Product/ProductCard";
+import HomeSectionTitle from "../components/Shared/SectionTitle";
 import {
   useGetProductImagesQuery,
   useGetProductsQuery,
@@ -33,15 +34,22 @@ const ProductListPage = () => {
   if (loadingProducts || loadingImages) return <div>Loading...</div>;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {mergedProducts.map((product: any) => (
-        <ProductCard
-          key={product.id}
-          {...product}
-          onAddToCart={() => dispatch(addToCart(product))}
-        />
-      ))}
-    </div>
+    <section>
+      <HomeSectionTitle
+        mainTitle="All Products"
+        subTitle="You can see all kind of products and you can add to cart product"
+      />
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 container mx-auto my-8">
+        {mergedProducts.map((product: any) => (
+          <ProductCard
+            key={product.id}
+            {...product}
+            onAddToCart={() => dispatch(addToCart(product))}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 
