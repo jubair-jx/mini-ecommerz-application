@@ -75,3 +75,9 @@ Make sure you have the following installed:
 ### Frontend URL :
 
 https://mini-commerz-by-jubair.netlify.app
+
+## Develop By :
+
+### Mohammad Jubair - Full Stack Developer
+
+Portfolio : https://mohammad-jubair.vercel.app/
