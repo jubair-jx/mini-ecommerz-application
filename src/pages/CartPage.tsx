@@ -56,11 +56,11 @@ const CartPage: React.FC = () => {
             <tbody>
               {cartItems.map((item) => (
                 <tr key={item.id} className="hover:bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-2">
+                  <td className="border border-gray-200 px-4 py-2 mx-auto">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-16 h-16 object-cover rounded"
+                      className="w-16 h-16 object-cover rounded mx-auto"
                     />
                   </td>
                   <td className="border border-gray-200 px-4 py-2 text-sm sm:text-base">

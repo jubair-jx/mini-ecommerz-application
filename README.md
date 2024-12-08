@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Mini E-Commerez Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive **Mini E-Commerez Application** featuring product listing, cart functionality, and dynamic skeleton loading states. Built with a modern tech stack for an optimized and scalable user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Product Listing**: Display products fetched from APIs with a loading skeleton state.
+- **Add to Cart**: Fully functional cart with quantity management and removal options.
+- **Responsive Design**: Optimized for all screen sizes.
+- **State Management**: Redux for managing cart state.
+- **Loading Skeleton**: Skeleton cards during API loading.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**:
+  - React.js (TypeScript)
+  - Tailwind CSS
+  - Redux Toolkit
+  - React Hook Form
+  - Sonner for toast notifications
+- **Backend**:
+  - API integration using RTK Query
+  - API From JSON Placeholder MOCK API
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation & Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+---
+
+### Getting Started
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/product-showcase-app.git
+   cd product-showcase-app
+   npm install or yarn
+   ```

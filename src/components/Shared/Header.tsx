@@ -2,8 +2,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "../../assets/shopping.png";
 import { RootState } from "../../redux/store";
-
 const Header: React.FC = () => {
   const cartCount = useSelector((state: RootState) =>
     state.cart.items.reduce(
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           to="/"
           className="sm:text-2xl text-sm font-bold flex items-center justify-between sm:gap-4 gap-2"
         >
-          <img src="/public/shopping.png" className="sm:h-10 sm:w-10 h-6 w-6" />
+          <img src={Logo} className="sm:h-10 sm:w-10 h-6 w-6" />
           Mini E-Commerce
         </Link>
         <nav>
