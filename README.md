@@ -57,8 +57,8 @@ Make sure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/product-showcase-app.git
-   cd product-showcase-app
+   git clone https://github.com/jubair-jx/mini-ecommerz-application.git
+   cd mini-ecommerz-application
    npm install or yarn
    ```
 
@@ -76,7 +76,7 @@ Make sure you have the following installed:
 
 https://mini-commerz-by-jubair.netlify.app
 
-## Develop By :
+## Developed By :
 
 ### Mohammad Jubair - Full Stack Developer
 
