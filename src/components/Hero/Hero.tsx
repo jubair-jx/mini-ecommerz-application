@@ -26,7 +26,7 @@ const Hero = () => {
 
             <div className="relative 2xl:bottom-[540px] lg:bottom-[540px] xl:bottom-[540px]  sm:bottom-[560px] bottom-[560px]">
               <div className="flex flex-col justify-center items-center mt-2 ">
-                <h1 className="2xl:text-[60px] xl:text-[50px] lg:text-[46px] md:text-[44px] px-[6px] text-center text-[25px] bg-gradient-to-r lg:px-44 from-[#b3b3b3]  via-[#c9c9c9] font-Rubik  to-[#eaeaea] bg-clip-text text-transparent leading-tight mt-3 font-bold">
+                <h1 className="2xl:text-[60px] xl:text-[50px] lg:text-[46px] md:text-[44px] px-[6px] text-center text-[25px] bg-gradient-to-r lg:px-44 from-[#b3b3b3]  via-[#c9c9c9] font-Rubik  to-[#eaeaea] bg-clip-text text-transparent leading-tight mt-3 font-bold font-roboto">
                   Discover the Future of Shopping with a Cart System That Works{" "}
                   <span className="text-violet-500">Seamlessly.</span>
                 </h1>
