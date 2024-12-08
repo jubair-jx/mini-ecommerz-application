@@ -4,11 +4,24 @@ A fully responsive **Mini E-Commerez Application** featuring product listing, ca
 
 ## Features
 
-- **Dynamic Product Listing**: Display products fetched from APIs with a loading skeleton state.
-- **Add to Cart**: Fully functional cart with quantity management and removal options.
-- **Responsive Design**: Optimized for all screen sizes.
-- **State Management**: Redux for managing cart state.
-- **Loading Skeleton**: Skeleton cards during API loading.
+### Product List
+
+- Displays a list of products with their name, image, and price.
+- Supports pagination with a "Load More Products" button.
+- Shows a loading skeleton while data is being fetched.
+
+### Cart Management
+
+- Add products to the cart.
+- Update product quantities in the cart.
+- Remove products from the cart.
+- Calculates and displays the total price of the cart.
+- **Cart Persistence**: The cart data is persisted across page refreshes using `redux-persist`.
+
+### Responsive Design
+
+- Fully responsive UI for all devices using Tailwind CSS.
+- User-friendly layout for both product listing and cart pages.
 
 ---
 
@@ -18,7 +31,10 @@ A fully responsive **Mini E-Commerez Application** featuring product listing, ca
   - React.js (TypeScript)
   - Tailwind CSS
   - Redux Toolkit
-  - React Hook Form
+  - Framer Motion
+  - RTK Query
+  - Redux-Persis : For persisting cart data
+  - React-Router-Dom
   - Sonner for toast notifications
 - **Backend**:
   - API integration using RTK Query
@@ -45,3 +61,17 @@ Make sure you have the following installed:
    cd product-showcase-app
    npm install or yarn
    ```
+
+## For The Checking Tips
+
+`Step:1` For development purpose
+
+```typescript
+ npm run dev
+ or
+ yarn dev
+```
+
+### Frontend URL :
+
+https://mini-commerz-by-jubair.netlify.app
